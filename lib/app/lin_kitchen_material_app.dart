@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lin_kitchen/resources/theme/app_theme.dart';
+import 'package:lin_kitchen/resource/theme/app_theme.dart';
 
-import '../resources/localization/l10n.dart';
+import '../resource/localization/l10n.dart';
 import '../router/router.dart';
 
 class LinKitchenMaterialApp extends StatelessWidget {
@@ -16,7 +16,7 @@ class LinKitchenMaterialApp extends StatelessWidget {
     return MaterialApp(
       localizationsDelegates: const [AppTranslations.delegate],
       navigatorKey: navigationKey,
-      title: 'Pets Care App',
+      title: 'Lin Kitchen App',
       locale: locale,
       debugShowCheckedModeBanner: false,
       builder: (context, child) {

@@ -1,4 +1,6 @@
 
+import 'package:lin_kitchen/ui/welcome/bloc/welcome_cubit.dart';
+
 import '../../ui/bloc/app/app_cubit.dart';
 import '../../ui/bloc/localization/localization_cubit.dart';
 import '../injection.dart';
@@ -11,6 +13,9 @@ abstract class CubitModule {
       })
       ..registerFactory<LocalizationCubit>(() {
         return LocalizationCubit();
+      })
+      ..registerFactory<WelcomeCubit>(() {
+        return WelcomeCubit();
       });
   }
 }
