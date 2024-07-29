@@ -1,4 +1,5 @@
 
+import 'package:lin_kitchen/ui/auth/sign_up/bloc/sign_up_cubit.dart';
 import 'package:lin_kitchen/ui/welcome/bloc/welcome_cubit.dart';
 
 import '../../ui/bloc/app/app_cubit.dart';
@@ -16,6 +17,9 @@ abstract class CubitModule {
       })
       ..registerFactory<WelcomeCubit>(() {
         return WelcomeCubit();
+      })
+      ..registerFactory<SignUpCubit>(() {
+        return SignUpCubit();
       });
   }
 }
