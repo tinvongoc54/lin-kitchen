@@ -6,6 +6,7 @@ import 'package:lin_kitchen/di/injection.dart';
 import 'package:lin_kitchen/resource/assets/app_assets.dart';
 import 'package:lin_kitchen/resource/theme/app_text_styles.dart';
 import 'package:lin_kitchen/resource/theme/app_colors.dart';
+import 'package:lin_kitchen/router/route_page.dart';
 import 'package:lin_kitchen/ui/welcome/bloc/welcome_cubit.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -115,15 +116,20 @@ class _WelcomePageState extends State<WelcomePage> {
                       ],
                     ),
                     const SizedBox(height: 18),
-                    Container(
-                      height: 55,
-                      decoration: BoxDecoration(
-                          color: AppColors.whiteOpa40,
-                          borderRadius: BorderRadius.circular(25),
-                          border: Border.all(color: Colors.white)),
-                      alignment: Alignment.center,
-                      child: Text('Start with email or phone',
-                          style: mediumStyle(size: 17, color: Colors.white)),
+                    CupertinoButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamedAndRemoveUntil(SIGN_UP, (_) => false);
+                      },
+                      child: Container(
+                        height: 55,
+                        decoration: BoxDecoration(
+                            color: AppColors.whiteOpa40,
+                            borderRadius: BorderRadius.circular(25),
+                            border: Border.all(color: Colors.white)),
+                        alignment: Alignment.center,
+                        child: Text('Start with email or phone',
+                            style: mediumStyle(size: 17, color: Colors.white)),
+                      ),
                     ),
                     const SizedBox(height: 18),
                     Row(

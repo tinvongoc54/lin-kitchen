@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lin_kitchen/router/route_page.dart';
+import 'package:lin_kitchen/ui/auth/sign_up/sign_up_screen.dart';
 import 'package:lin_kitchen/ui/welcome/welcome_screen.dart';
 
 class AppRouter {
@@ -19,6 +20,11 @@ class AppRouter {
       case WELCOME:
         return MaterialPageRoute(
           builder: (_) => const WelcomeScreen(),
+          settings: settings,
+        );
+      case SIGN_UP:
+        return MaterialPageRoute(
+          builder: (_) => const SignUpScreen(),
           settings: settings,
         );
       case MAIN_TAB_BAR:
